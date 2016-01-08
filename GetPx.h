@@ -10,19 +10,16 @@
 #include <libndls.h>
 
 void _reverse_pixel_(int x, int y) {
-    volatile unsigned char *ptr;
-    if (has_colors) {
-        ptr = (volatile unsigned char *) SCREEN_BASE_ADDRESS;
-        ptr += y * SCREEN_WIDTH * sizeof(short) + x * sizeof(short);
-    } else {
-        ptr = (volatile unsigned char *) SCREEN_BASE_ADDRESS + (x >> 1) + (y << 7) + (y << 5);
-    }
+    volatile unsigned char *ptr = (volatile unsigned char *) SCREEN_BASE_ADDRESS;
+    ptr += y * SCREEN_WIDTH * sizeof(short) + x * sizeof(short);
     *(volatile unsigned short *) ptr =  ~(*(volatile unsigned short *) ptr);
 }
 
 void get_px() {
     int x=0, y=0;
     _reverse_pixel_(0, 0);
+
+    if (!has_colors) return;
 
     while (!isKeyPressed(KEY_NSPIRE_ESC)) {
         /* Arrow key */

@@ -11,5 +11,8 @@ Ndless 上获取任意点坐标的小工具。
 ## Author
 Haruue Icymoon <haruue@caoyue.com.cn>
 
+## Known BUG
+只支持彩屏机
+
 ## Licence
 WTFPL
