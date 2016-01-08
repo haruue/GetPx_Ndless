@@ -2,7 +2,7 @@
  * GetPx.h
  * Get the coordinate of any point on the screen.
  * @author Haruue Icymoon <Haruue Icymoon>
- * @version v1.0.1
+ * @version v1.0.2
  * @link https://github.com/haruue/GetPx_Ndless
  * @licence WTFPL
  */
