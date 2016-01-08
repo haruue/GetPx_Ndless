@@ -37,6 +37,7 @@ void get_px() {
             change = 4;
         else if (isKeyPressed(KEY_NSPIRE_ENTER)) {
             /* Show Coordinate */
+            printf("%d, %d\n", x, y);
             char *coordinate = (char *) malloc(sizeof(char) * 8);
             memset(coordinate, 0, sizeof(char) * 8);
             char *tmp = (char *) malloc(sizeof(char) * 3);
