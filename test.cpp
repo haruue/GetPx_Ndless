@@ -11,10 +11,10 @@
 #include "GetPx.h"
 
 int main(void) {
-	assert_ndless_rev(801);
+    assert_ndless_rev(801);
 
-	/* Use it wherever you want to get the coordinate. */
-	get_px();
-	
-	return 0;
+    /* Use it wherever you want to get the coordinate. */
+    get_px();
+    
+    return 0;
 }
